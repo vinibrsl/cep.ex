@@ -57,6 +57,9 @@ iex> Cepex.lookup("80210130")
 }}
 ```
 
+## Docs
+The full documentation is available on [Hex](https://hexdocs.pm/cepex/api-reference.html).
+
 ## Contributing
 
 1. Create a fork (https://github.com/vnbrs/cep.ex/fork)

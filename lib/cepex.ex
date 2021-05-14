@@ -12,40 +12,40 @@ defmodule Cepex do
   Available options are `http_client` (defaults to `Cepex.HTTP.Hackney`) and `service`
   (defaults to `Cepex.Service.ViaCEP`).
 
-    ## Examples
+  ## Examples
 
-    iex> Cepex.lookup("80010-180")
-    {:ok, %Cepex.Address{
-      address: "Rua Barão do Rio Branco",
-      cep: "80010180",
-      city: "Curitiba",
-      complement: "",
-      http_response: %Cepex.HTTP.Response{},
-      neighborhood: "Centro",
-      state: "PR"
-    }}
+      iex> Cepex.lookup("80010-180")
+      {:ok, %Cepex.Address{
+        address: "Rua Barão do Rio Branco",
+        cep: "80010180",
+        city: "Curitiba",
+        complement: "",
+        http_response: %Cepex.HTTP.Response{},
+        neighborhood: "Centro",
+        state: "PR"
+      }}
 
-    iex> Cepex.lookup(80010180)
-    {:ok, %Cepex.Address{
-      address: "Rua Barão do Rio Branco",
-      cep: "80010180",
-      city: "Curitiba",
-      complement: "",
-      http_response: %Cepex.HTTP.Response{},
-      neighborhood: "Centro",
-      state: "PR"
-    }}
+      iex> Cepex.lookup(80010180)
+      {:ok, %Cepex.Address{
+        address: "Rua Barão do Rio Branco",
+        cep: "80010180",
+        city: "Curitiba",
+        complement: "",
+        http_response: %Cepex.HTTP.Response{},
+        neighborhood: "Centro",
+        state: "PR"
+      }}
 
-    iex> Cepex.lookup("80210130")
-    {:ok, %Cepex.Address{
-      address: "Rua Barão do Rio Branco",
-      cep: "80010180",
-      city: "Curitiba",
-      complement: "",
-      http_response: %Cepex.HTTP.Response{},
-      neighborhood: "Centro",
-      state: "PR"
-    }}
+      iex> Cepex.lookup("80210130")
+      {:ok, %Cepex.Address{
+        address: "Rua Barão do Rio Branco",
+        cep: "80010180",
+        city: "Curitiba",
+        complement: "",
+        http_response: %Cepex.HTTP.Response{},
+        neighborhood: "Centro",
+        state: "PR"
+      }}
 
   """
   def lookup(cep, opts \\ []) do

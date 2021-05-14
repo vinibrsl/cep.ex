@@ -15,13 +15,13 @@ defmodule Cepex.CEP do
   @doc """
   Formats a valid CEP string. If the string may be invalid, call `Cepex.CEP.parse/1` first.
 
-    ## Examples
+  ## Examples
 
-    iex> Cepex.CEP.format("80210130")
-    {:ok, "80210-130"}
+      iex> Cepex.CEP.format("80210130")
+      {:ok, "80210-130"}
 
-    iex> Cepex.CEP.format(8344010)
-    {:error, :invalid}
+      iex> Cepex.CEP.format(8344010)
+      {:error, :invalid}
 
   """
   def format(cep)
@@ -36,26 +36,26 @@ defmodule Cepex.CEP do
 
   ## Examples
 
-    iex> Cepex.CEP.parse("80210130")
-    {:ok, "80210130"}
+      iex> Cepex.CEP.parse("80210130")
+      {:ok, "80210130"}
 
-    iex> Cepex.CEP.parse(80210130)
-    {:ok, "80210130"}
+      iex> Cepex.CEP.parse(80210130)
+      {:ok, "80210130"}
 
-    iex> Cepex.CEP.parse("80210-130")
-    {:ok, "80210130"}
+      iex> Cepex.CEP.parse("80210-130")
+      {:ok, "80210130"}
 
-    iex> Cepex.CEP.parse(8344010)
-    {:ok, "08344010"}
+      iex> Cepex.CEP.parse(8344010)
+      {:ok, "08344010"}
 
-    iex> Cepex.CEP.parse("8344010")
-    {:ok, "08344010"}
+      iex> Cepex.CEP.parse("8344010")
+      {:ok, "08344010"}
 
-    iex> Cepex.CEP.parse("00000-000")
-    {:error, :invalid}
+      iex> Cepex.CEP.parse("00000-000")
+      {:error, :invalid}
 
-    iex> Cepex.CEP.parse("80210130130130")
-    {:error, :invalid}
+      iex> Cepex.CEP.parse("80210130130130")
+      {:error, :invalid}
 
   """
   def parse(cep)
