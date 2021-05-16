@@ -5,7 +5,7 @@ defmodule Cepex.MixProject do
     [
       app: :cepex,
       version: "0.1.0",
-      elixir: "~> 1.11",
+      elixir: ">= 1.9.4",
       description: "Brazilian zipcode lookup (CEP) library for Elixir",
       source_url: "https://github.com/vinibrsl/cep.ex",
       package: [licenses: ["MIT"], links: []],
